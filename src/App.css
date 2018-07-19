@@ -1,0 +1,16 @@
+.App {
+  text-align: center;
+}
+.content {
+  padding: 50px;
+}
+
+.content h1, .content p {
+  color: #333;
+}
+
+.content .search-area {
+  width: 450px;
+  margin: auto;
+}
+
