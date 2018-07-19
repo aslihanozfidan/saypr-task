@@ -13,14 +13,15 @@
 .SearchBox input:focus {
     border: none;
     outline: none;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #D8D8D8;
 }
 
 .SearchBox .max-character {
     float: right;
     padding: 10px 0px;
     font-size: 12px;
-    color: purple;
+    font-weight: 600;
+    color: #734799;
 }
 
 .SearchBox .label-area {
@@ -31,20 +32,37 @@
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-    -webkit-flex-flow: row wrap;
+    -webkit-flex-flow: row nowrap;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-content: center;
     align-items: center;
+    padding: 30px 0px;
+    overflow: hidden;
 }
 .SearchBox .label-area .label {
-    padding: 15px;
-    border-radius: 20%;
+    padding: 15px 30px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    font-size: 14px;
     color: #383838;
+    background-color: #F5F5F5;
+}
+
+.SearchBox .label-area .label::after {
+    content: "x";
+    font-weight: bold;
+    color: #383838;
+    margin-left: 20px;
+    cursor: pointer;
 }
 
 .SearchBox .next-btn {
     padding: 15px 50px;
     font-weight: bold;
+    cursor: pointer;
     color: #383838;
     background-color: #FFFB3F;
+    display: inline-block;
 }
