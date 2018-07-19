@@ -27,11 +27,10 @@ class SearchBox extends Component {
         event.target.value = '';
     }
 
-    removeItem = (id) => {
-        const removedItem = this.state.itemList.slice();
-        removedItem.splice(id, 1);
+    removeItem = (index, i) => {    
+        this.state.itemList.splice(index, 1);
         this.setState({
-            itemList: removedItem
+            itemList: this.state.itemList
         })
     }
 
@@ -49,6 +48,7 @@ class SearchBox extends Component {
                             <div className="label" key={item} onClick={this.removeItem.bind(this, i)}>{item}</div>
                     )}
                 </div>
+                
                 <a className="next-btn">Next</a>
             </div>
         )
