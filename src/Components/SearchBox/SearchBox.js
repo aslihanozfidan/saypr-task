@@ -23,6 +23,8 @@ class SearchBox extends Component {
             itemList: [...prevState.itemList, this.state.item]
         }));
         console.log(this.state.item);
+        this.setState({ item: '' });
+        event.target.value = '';
     }
 
     render() {
