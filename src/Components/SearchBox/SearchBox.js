@@ -39,10 +39,10 @@ class SearchBox extends Component {
         return (
             <div className="SearchBox">
                 <form onSubmit={this.handleSubmit}>
-                    <input type="text" placeholder="We want to go viral..." value={this.state.item} onChange={this.handleChange} />
+                    <input type="text" placeholder="We want to go viral..." value={this.state.item} onChange={this.handleChange} maxLength="75" />
                     <input type="submit" value="Submit" />
                 </form>
-                <span className="max-character">0/75</span>
+                <span className="max-character">{this.state.item.length}/75</span>
                 <div className="label-area">
                     {this.state.itemList.map(
                         (item, i) =>
