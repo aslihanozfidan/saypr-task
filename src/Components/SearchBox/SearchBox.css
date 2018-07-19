@@ -16,6 +16,10 @@
     border-bottom: 1px solid #D8D8D8;
 }
 
+.SearchBox input[type=submit] {
+    display: none;
+}
+
 .SearchBox .max-character {
     float: right;
     padding: 10px 0px;

@@ -27,6 +27,14 @@ class SearchBox extends Component {
         event.target.value = '';
     }
 
+    removeItem = (id) => {
+        const removedItem = this.state.itemList.slice();
+        removedItem.splice(id, 1);
+        this.setState({
+            itemList: removedItem
+        })
+    }
+
     render() {
         return (
             <div className="SearchBox">
@@ -36,10 +44,10 @@ class SearchBox extends Component {
                 </form>
                 <span className="max-character">0/75</span>
                 <div className="label-area">
-                    <div className="label">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-                    <div className="label">Lorem</div>
-                    <div className="label">Lorem ipsum dolor sit amet.</div>
-                    <div className="label">Lorem ipsum dolor sit amet, consectetur</div>
+                    {this.state.itemList.map(
+                        (item, i) =>
+                            <div className="label" key={item} onClick={this.removeItem.bind(this, i)}>{item}</div>
+                    )}
                 </div>
                 <a className="next-btn">Next</a>
             </div>
