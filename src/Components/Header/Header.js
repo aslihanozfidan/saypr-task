@@ -1,14 +1,12 @@
 import React from 'react';
 import './Header.css';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
 const Header = props => {
     return (
         <header className="App-header">
             <ul>
                 <li>
-                    <div><FontAwesomeIcon icon="stroopwafel" /></div>
+                    <div></div>
                     <h4>Brand Profile</h4>
                     <h5>Save and exit</h5>
                 </li>

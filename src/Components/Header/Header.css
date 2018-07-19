@@ -25,25 +25,33 @@
     color: white;
     list-style: none;    
     padding: 0px 50px;
+    cursor: pointer;
   }
   
   .App-header ul li:first-child {
-    color: #383838;
     list-style: none;
     background-color: #FFFB3F;
   }
-  /* 
+  
   .App-header ul li:first-child::before {
     
-  } */
+  } 
   
   .App-header ul li:first-child h4 {
     text-align: left;
     margin-bottom: 5px;
+    color: #383838;
   }
   
   .App-header ul li:first-child h5 {
     font-weight: normal;
     text-align: left;
     margin-top: 5px;
+    color: #383838;
   }
+  
+  .App-header ul li h4 {
+    color: #969696;
+  }
+
+  
