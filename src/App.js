@@ -22,9 +22,13 @@ class App extends Component {
   handleSelectProfile = (isTrue) => {
     this.setState({ isUser: isTrue });
   }
+  
+  onCleanIsUser = () => {
+    this.setState({ isUser: '' });
+  }
 
   componentDidMount() {
-    this.setState({ isUser: '' });
+    this.onCleanIsUser();
   }
 
   render() {
@@ -40,8 +44,8 @@ class App extends Component {
         ) : (
             <div className="content">
               {this.state.isUser ?
-                <Header profileType={'user'} isUser={this.state.isUser} /> :
-                <Header profileType={'brand'} isUser={this.state.isUser} />}
+                <Header profileType={'user'} isUser={this.state.isUser} cleanIsUser={this.onCleanIsUser} /> :
+                <Header profileType={'brand'} isUser={this.state.isUser} cleanIsUser={this.onCleanIsUser} />}
               <h1>{this.state.isUser ? this.state.title.user : this.state.title.brand}</h1>
               <p>{this.state.isUser ? this.state.titleQuestion.user : this.state.titleQuestion.brand}</p>
               <div className="search-area">

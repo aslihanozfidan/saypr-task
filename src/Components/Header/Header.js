@@ -3,16 +3,11 @@ import './Header.css';
 import { headerConst } from '../../Constants/headerData';
 
 class Header extends Component {
-
-    handleSelectProfile = (isTrue) => {
-        this.setState({ isUser: '' });
-    }
     render() {
-
         return (
             <header className="App-header">
                 <ul>
-                    <li className={this.props.profileType === 'user' ? 'bg-blue' : 'bg-yellow'} onClick={() => this.handleSelectProfile('')}>
+                    <li className={this.props.profileType === 'user' ? 'bg-blue' : 'bg-yellow'} onClick={this.props.cleanIsUser}>
                         <div></div>
                         <h4>{headerConst.profile[this.props.profileType]}</h4>
                         <h5>{headerConst.isSaveAndExit[this.props.profileType]}</h5>
