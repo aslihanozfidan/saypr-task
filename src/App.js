@@ -39,7 +39,9 @@ class App extends Component {
           </div>
         ) : (
             <div className="content">
-              {this.state.isUser ? <Header profileType={'user'} isUser={this.state.isUser} /> : <Header profileType={'brand'} isUser={this.state.isUser} />}
+              {this.state.isUser ?
+                <Header profileType={'user'} isUser={this.state.isUser} /> :
+                <Header profileType={'brand'} isUser={this.state.isUser} />}
               <h1>{this.state.isUser ? this.state.title.user : this.state.title.brand}</h1>
               <p>{this.state.isUser ? this.state.titleQuestion.user : this.state.titleQuestion.brand}</p>
               <div className="search-area">
