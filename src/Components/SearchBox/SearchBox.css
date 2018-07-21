@@ -1,9 +1,9 @@
-.SearchBox {
+.search-box {
     width: 100%;
     position: relative;
 }
 
-.SearchBox input[type=text] {
+.search-box input[type=text] {
     width: 100%;
     padding: 8px 0px;
     border: none;
@@ -13,13 +13,13 @@
     background-color: transparent;
 }
 
-.SearchBox input[type=text]:focus {
+.search-box input[type=text]:focus {
     border: none;
     outline: none;
     border-bottom: 1px solid #D8D8D8;
 }
 
-.SearchBox form span {   
+.search-box form span {   
     position: absolute; 
     right: 0px;
     top: -8px;   
@@ -29,11 +29,11 @@
     cursor: pointer;
 }
 
-.SearchBox input[type=submit] {
+.search-box input[type=submit] {
     display: none;
 }
 
-.SearchBox .max-character-count {
+.search-box .max-character-count {
     float: right;
     padding: 8px 0px;
     font-size: 12px;
@@ -41,7 +41,7 @@
     color: #734799;
 }
 
-.SearchBox .label-area {
+.search-box .label-area {
     width: 100%;
     height: auto;
     display: -webkit-box;
@@ -57,7 +57,7 @@
     margin-bottom: 36px;
     overflow: hidden;
 }
-.SearchBox .label-area .label {
+.search-box .label-area .label {
     padding: 15px 30px;
     margin-right: 20px;
     margin-bottom: 20px;
@@ -67,7 +67,7 @@
     background-color: #F5F5F5;
 }
 
-.SearchBox .label-area .label::after {
+.search-box .label-area .label::after {
     content: "x";
     font-weight: bold;
     color: #383838;
@@ -75,7 +75,7 @@
     cursor: pointer;
 }
 
-.SearchBox .next-btn {
+.search-box .next-btn {
     display: inline-block;
     padding: 15px 50px;
     font-weight: bold;

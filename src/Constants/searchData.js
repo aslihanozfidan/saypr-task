@@ -1,4 +1,3 @@
-
 export const searchConst = {
     inputPlaceholder: {
         buyer: 'We want to go viral...',

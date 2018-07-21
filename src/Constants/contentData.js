@@ -1,4 +1,3 @@
-
 export const contentConst = {
     title: {
         buyer: 'Objectives',

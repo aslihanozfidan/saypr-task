@@ -1,4 +1,4 @@
-.App {
+.app {
     text-align: center;
 }
 
@@ -22,16 +22,15 @@ header div {
 }
 
 .content .search-area {
-    width: 450px;
+    max-width: 570px;
     margin: auto;
 }
 
 .content .content-title h1 span {
-    display: block;
-    width: 180px;
+    display: inline-block;
     margin: auto;
     position: relative;
-    padding: 25px 10px;
+    padding: 25px;
 }
 
 .content .content-title h1 span::after {

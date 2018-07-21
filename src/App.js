@@ -7,26 +7,23 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isBuyerTheme: true,
+      theme: 'buyer',
     }
   }
 
-  handleClick = () => {
-    this.setState({
-      isBuyerTheme: !this.state.isBuyerTheme,
-    });
+  onThemeChange = (theme) => {
+    this.setState({ theme: this.state.theme === 'creator' ? 'buyer' : 'creator'});
   }
 
-
-
   render() {
+    const { theme } = this.state;
     return (
-      <div className="App">
+      <div className="app">
         <header>
-          <div onClick={this.handleClick}>Toggle Theme</div>
+          <div onClick={this.onThemeChange}>Toggle Theme</div>
         </header>
         <div className="content">
-          {this.state.isBuyerTheme ?
+          {this.state.theme === 'creator' ?
             <div className="content-title">
               <h1>
                 <span className="line-blue">
@@ -48,9 +45,7 @@ class App extends Component {
           }
 
           <div className="search-area">
-            {this.state.isBuyerTheme ?
-              <SearchBox profileType={'creator'} isChange={this.state.isBuyerTheme} /> :
-              <SearchBox profileType={'buyer'} isChange={this.state.isBuyerTheme} />}
+            <SearchBox profileType={theme} theme={theme}/>
           </div>
         </div>
       </div>
