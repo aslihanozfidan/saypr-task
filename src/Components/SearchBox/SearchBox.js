@@ -7,10 +7,22 @@ class SearchBox extends Component {
         this.state = {
             item: '',
             itemList: [],
+            inputPlaceholder: {
+                brand: 'We want to go viral...',
+                user: 'Stop Motion',
+            },
+            buttonText: {
+                brand: 'Next',
+                user: 'Finish',
+            },
         };
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+
+        function getProfileType(props) {
+            return props.profileType;
+        }
     }
 
     handleChange(event) {
@@ -22,12 +34,12 @@ class SearchBox extends Component {
         this.setState(prevState => ({
             itemList: [...prevState.itemList, this.state.item]
         }));
-        console.log(this.state.item);
+
         this.setState({ item: '' });
         event.target.value = '';
     }
 
-    removeItem = (index, i) => {    
+    removeItem = (index, i) => {
         this.state.itemList.splice(index, 1);
         this.setState({
             itemList: this.state.itemList
@@ -38,7 +50,7 @@ class SearchBox extends Component {
         return (
             <div className="SearchBox">
                 <form onSubmit={this.handleSubmit}>
-                    <input type="text" placeholder="We want to go viral..." value={this.state.item} onChange={this.handleChange} maxLength="75" />
+                    <input type="text" placeholder={this.props.profileType === 'user' ? this.state.inputPlaceholder.user : this.state.inputPlaceholder.brand} value={this.state.item} onChange={this.handleChange} maxLength="75" />
                     <input type="submit" value="Submit" />
                 </form>
                 <span className="max-character">{this.state.item.length}/75</span>
@@ -48,8 +60,8 @@ class SearchBox extends Component {
                             <div className="label" key={item} onClick={this.removeItem.bind(this, i)}>{item}</div>
                     )}
                 </div>
-                
-                <a className="next-btn">Next</a>
+
+                <a className={this.props.profileType === 'user' ? 'next-btn bg-blue font-white' : 'next-btn bg-yellow font-gray'}>{this.props.profileType === 'user' ? this.state.buttonText.user : this.state.buttonText.brand}</a>
             </div>
         )
     }

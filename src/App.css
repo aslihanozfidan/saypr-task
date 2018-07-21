@@ -1,16 +1,38 @@
 .App {
-  text-align: center;
-}
-.content {
-  padding: 50px;
+    text-align: center;
 }
 
-.content h1, .content p {
-  color: #333;
+.content h1,
+.content p {
+    color: #333;
 }
 
 .content .search-area {
-  width: 450px;
-  margin: auto;
+    width: 450px;
+    margin: auto;
 }
 
+.SelectProfile ul {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.SelectProfile ul li {
+    color: #383838;
+    padding: 30px 50px;
+    cursor: pointer;
+}
+
+.SelectProfile ul li:first-child {
+    background-color: #FFFB3F;
+}
+
+.SelectProfile ul li:nth-child(2) {
+    background-color: #4CE6F1;
+}
