@@ -21,9 +21,9 @@ class SearchBox extends Component {
     handleSubmit(event) {
         event.preventDefault();
         this.setState(prevState => ({
-            itemList: [...prevState.itemList, this.state.item]
+            itemList: [...prevState.itemList, this.state.item],
+            item: ''
         }));
-
         this.setState({ item: '' });
         event.target.value = '';
     }
@@ -46,7 +46,7 @@ class SearchBox extends Component {
                 <div className="label-area">
                     {this.state.itemList.map(
                         (item, i) =>
-                            <div className="label" key={item} onClick={this.removeItem.bind(this, i)}>{item}</div>
+                            <div className="label" key={i} onClick={this.removeItem.bind(this, i)}>{item}</div>
                     )}
                 </div>
 

@@ -1,34 +1,23 @@
 import React, { Component } from 'react';
 import './App.css';
-
 import SearchBox from './Components/SearchBox/SearchBox';
 import Header from './Components/Header/Header';
+import { contentConst } from './Constants/contentData';
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: {
-        brand: 'Objectives',
-        user: 'Skillset',
-      },
-      titleQuestion: {
-        brand: 'What business objectives do you want to accomplish?',
-        user: 'What are some of your production skills and techniques?',
-      },
+      isUser: ''
     }
   }
 
   handleSelectProfile = (isTrue) => {
     this.setState({ isUser: isTrue });
   }
-  
+
   onCleanIsUser = () => {
     this.setState({ isUser: '' });
-  }
-
-  componentDidMount() {
-    this.onCleanIsUser();
   }
 
   render() {
@@ -46,8 +35,25 @@ class App extends Component {
               {this.state.isUser ?
                 <Header profileType={'user'} isUser={this.state.isUser} cleanIsUser={this.onCleanIsUser} /> :
                 <Header profileType={'brand'} isUser={this.state.isUser} cleanIsUser={this.onCleanIsUser} />}
-              <h1>{this.state.isUser ? this.state.title.user : this.state.title.brand}</h1>
-              <p>{this.state.isUser ? this.state.titleQuestion.user : this.state.titleQuestion.brand}</p>
+              {this.state.isUser ?
+                <div className="content-title">
+                  <h1>
+                    <span className="line-blue">
+                      {contentConst.title.user}
+                    </span>
+                  </h1>
+                  <p>{contentConst.titleQuestion.user}</p>
+                </div>
+                :
+                <div className="content-title">
+                  <h1>
+                    <span className="line-yellow">
+                      {contentConst.title.brand}
+                    </span>
+                  </h1>
+                  <p>{contentConst.titleQuestion.brand}</p>
+                </div>
+              }
               <div className="search-area">
                 {this.state.isUser ? <SearchBox profileType={'user'} /> : <SearchBox profileType={'brand'} />}
               </div>

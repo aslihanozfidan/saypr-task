@@ -28,10 +28,25 @@
     padding: 0px 50px;
     cursor: pointer;
   }
+    
+  .App-header ul li svg {
+    display: block;
+    margin: auto;
+    font-size: 25px;
+    color: #fff;
+  }
   
   .App-header ul li:first-child {
-    min-height: 85px;
+    display: flex;
+    align-items: center;
+    min-height: 88px;
     list-style: none;
+  }
+
+  .App-header ul li:first-child svg {
+    font-size: 30px;
+    color: #383838;
+    margin-right: 10px;
   }
   
   .App-header ul li:first-child::before {
