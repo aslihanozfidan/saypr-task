@@ -1,11 +1,11 @@
 
 export const searchConst = {
     inputPlaceholder: {
-        brand: 'We want to go viral...',
-        user: 'Stop Motion',
+        buyer: 'We want to go viral...',
+        creator: 'Stop Motion',
     },
     buttonText: {
-        brand: 'Next',
-        user: 'Finish',
+        buyer: 'Next',
+        creator: 'Finish',
     },
 };
