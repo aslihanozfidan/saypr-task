@@ -61,7 +61,7 @@
 }
 
 .SelectProfile ul {
-    margin-top: calc(50% - 80px);
+    margin-top: 200px;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-pack: center;
