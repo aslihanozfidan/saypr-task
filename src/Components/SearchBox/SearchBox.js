@@ -34,7 +34,16 @@ class SearchBox extends Component {
         })
     }
 
+    componentWillReceiveProps() {
+        this.setState({
+            itemList: '',
+            item: '',
+        })
+
+    }
+
     render() {
+
         return (
             <div className="SearchBox">
                 <form onSubmit={this.handleSubmit}>

@@ -13,9 +13,11 @@ class App extends Component {
 
   handleClick = () => {
     this.setState({
-      isBuyerTheme: !this.state.isBuyerTheme
+      isBuyerTheme: !this.state.isBuyerTheme,
     });
   }
+
+
 
   render() {
     return (
@@ -47,8 +49,8 @@ class App extends Component {
 
           <div className="search-area">
             {this.state.isBuyerTheme ?
-              <SearchBox profileType={'creator'} /> :
-              <SearchBox profileType={'buyer'} />}
+              <SearchBox profileType={'creator'} isChange={this.state.isBuyerTheme} /> :
+              <SearchBox profileType={'buyer'} isChange={this.state.isBuyerTheme} />}
           </div>
         </div>
       </div>
