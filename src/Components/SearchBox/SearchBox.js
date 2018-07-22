@@ -31,10 +31,6 @@ class SearchBox extends Component {
     }
 
     removeItem = (index) => {
-        // this.setState({
-        //     items: this.state.items.filter((item, i) => i === index)
-        // })
-
         this.state.items.splice(index, 1);
         this.setState({
             items: this.state.items
