@@ -20,7 +20,7 @@ class App extends Component {
     return (
       <div className="app">
         <header>
-          <div onClick={this.onThemeChange}>Toggle Theme</div>
+          <span onClick={this.onThemeChange}>Toggle Theme</span>
         </header>
         <div className="content">
           {this.state.theme === 'creator' ?

@@ -3,13 +3,14 @@
 }
 
 header {
+    display: flex;
     height: 80px;
     width: 100%;
     color: white;
     background-color: #383838;
 }
 
-header div {    
+header span {    
     text-align: left;
     padding-left: 30px;
     line-height: 80px;
@@ -19,6 +20,7 @@ header div {
 .content h1,
 .content p {
     color: #333;
+    margin-bottom: 0px;
 }
 
 .content .search-area {
@@ -26,11 +28,16 @@ header div {
     margin: auto;
 }
 
+.content .content-title p {
+    padding-bottom: 30px;
+    margin-top: 10px;
+}
+
 .content .content-title h1 span {
     display: inline-block;
     margin: auto;
     position: relative;
-    padding: 25px;
+    padding: 25px 25px 0px 25px;
 }
 
 .content .content-title h1 span::after {
